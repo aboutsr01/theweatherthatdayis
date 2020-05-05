@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<!-- 
+		* root-context.xml 파일 경로 수정(선택사항)
+		project 디렉토리 구조를 보면 java,resources,webapp
+		이렇게 크게 3개로 나뉘는걸 확인할 수 있다.
+		프로그램 개발 완료 후 배포 시 webapp관련 부분만 배포하게 되어있다.
+		(java,resources 필요없다)
+		
+		spring설정 파일은 classpath(java,resource)에
+		웹 설정 파일은 webapp에 관리
+	 -->	
+	 <!-- 기존에 mybatis-config.xml에 작성했던 DB 정보
+	 	(-> 서버 구동됨과 동시에 읽어들인다.)
+	 	
+	 	destroy-method는 주어진 세션을 자동으로 close하라는 의미
+	 	
+	 	dataSource 등록은 순서가 중요하다.
+	 	 ->dataSource가 bean으로 등록이 되어있어야 아래에서 추가하는 sqlsession을 등록할 수 있다.
+	  -->
+</beans>
